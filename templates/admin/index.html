@@ -1,4 +1,22 @@
 {% extends 'admin/master.html' %}
 
 {% block body %}
+<p></p>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="jumbotron">
+                    <h1>Produção Diária</h1>
+                    <p>Essa página foi criada para substituir a planilha para registro de atendimentos e controle da produção diária da Agência Digital. Utilize o menu do lado esquerdo e os botões para acesso às funcionalidades da aplicação.</p>
+                    <p>
+                        <a href="{{ url_for('atendimento.create_view') }}" class="btn btn-success btn-lg" role="button">Novo atendimento »</a>
+                        <a href="{{ url_for('relatorios.index') }}" class="btn btn-success btn-lg" role="button">Relatórios »</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>  
 {% endblock %}

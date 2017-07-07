@@ -1,0 +1,83 @@
+
+{% extends 'admin/master.html' %}
+
+{% block body %}
+<p></p>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="navbar navbar-default">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Contratação</a>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Relatórios <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Consulta</a>
+                                        </li>
+                                        <li class="divider"></li>
+                                        <li class="dropdown-header">Produção Mensal</li>
+                                        <li><a href="#">Julho/2017</a>
+                                        </li>
+                                        <li><a href="#">Junho/2017</a>
+                                        </li>                                        
+                                        <li><a href="#">Maio/2017</a>
+                                        </li>
+                                        <li><a href="#">Abril/2017</a>
+                                        </li>
+                                        <li><a href="#">Março/2017</a>
+                                        </li>
+                                        <li><a href="#">Fevereiro/2017</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
+            </div>
+            
+
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Produto/Serviço</th>
+                                <th>03/07/2017</th>
+                                <th>04/07/2017</th>
+                                <th>05/07/2017</th>
+                                <th>06/07/2017</th>
+                                <th>07/07/2017</th>
+                                <th>Acumulado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for row in dados %}
+                            <tr>
+                                <td class="center">{{ row.nome }}</td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                                <td class="center"></td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+{% endblock %}
